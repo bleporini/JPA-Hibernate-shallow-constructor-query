@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="HotelsPU">
+
+        <class>org.blep.poc.hcq.Hotel</class>
+
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.hbm2ddl.import_files" value="/populate.sql"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:${project.build.directory}/hotels"/>
+            <property name="hibernate.connection.username" value="username"/>
+            <property name="hibernate.connection.password" value="password"/>
+
+
+
+        </properties>
+    </persistence-unit>
+</persistence>
